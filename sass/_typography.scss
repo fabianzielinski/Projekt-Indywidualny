@@ -1,0 +1,31 @@
+/* Typography */
+
+h1 {
+	font-size: $page-header-fsize;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: $section-header-fsize;
+	font-weight: bold;
+}
+
+p {
+	font-size: $text-fsize;
+}
+
+a {
+	text-decoration: none;
+	color: $color-tab;
+	&:hover {
+		color: $bttn-orange-hvr;
+	}
+	.link-small {
+		font-size: $sm-link-fsize;
+		color: blue;
+	}
+	.link-large {
+		font-size: $lg-link-fsize;
+		color: red;
+	}
+}
