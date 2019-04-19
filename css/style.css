@@ -147,17 +147,19 @@ a:hover { color: #FFA200; }
 
 .btn .links { width: 13px; height: 13px; filter: invert(100%); display: inline-block; }
 
-label { min-width: 842px; width: 100%; padding: 13px 13px; }
+label { box-sizing: border-box; position: relative; min-width: 242px; width: 100%; padding: 13px 13px; }
 
 label:hover { background-color: #E3E3E3; cursor: pointer; }
 
-label input[type="checkbox"] { box-sizing: border-box; position: absolute; margin: 0; width: 18px; height: 18px; opacity: 0; }
+label input[type="checkbox"] { position: absolute; left: 0; top: 0; margin: 10px 14px; width: 18px; height: 18px; opacity: 0; }
 
-label input[type="checkbox"] + .icon { display: inline-block; position: relative; width: 18px; height: 18px; border: 1px solid #E3E3E3; background-color: #FFFFFF; }
+label input[type="checkbox"] + .icon { display: inline-block; position: relative; left: 0; top: 0; width: 18px; height: 18px; border: 1px solid #E3E3E3; background-color: #FFFFFF; }
 
-label input[type="checkbox"]:checked + .icon { background-color: #04AE00; }
+label input[type="checkbox"]:checked + .icon { background-color: #04AE00; checked: checked; }
 
-label p { color: #333333; line-height: 42px; display: inline-block; margin: 15px 15px; }
+label input[type="checkbox"]:checked + .icon:before { content: "\2714"; border: 1px solid #04AE00; display: inline-block; width: 1em; height: 1em; padding-left: 0.2em; color: transparent; }
+
+label p { color: #333333; line-height: 42px; display: inline-block; margin: 13px 23px; }
 
 /* Components */
 /* Sections */
