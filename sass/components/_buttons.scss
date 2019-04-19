@@ -1,0 +1,47 @@
+
+.btn {
+	font-size: $btn-fsize;
+	padding: 11px 11px;
+	border-radius: 3px;
+	margin: 3px;
+	color: $bttn-color;
+	display: inline-block;
+}
+
+.btn-prim {
+	background-color: $bttn-primary;
+	border: 1px solid $bttn-primary;
+	&:hover {
+		background-color: $bttn-primary-hvr;
+		border: 1px solid $bttn-primary-hvr;
+		cursor: pointer;
+	}
+}
+
+.btn-sec {
+	background-color: $bttn-secondary;
+	border: 1px solid $bttn-secondary;
+	&:hover {
+		background-color: $bttn-secondary-hvr;
+		border: 1px solid $bttn-secondary-hvr;
+		cursor: pointer;
+	}
+}
+
+.btn-disabled {
+	background-color: $bttn-disabled;
+	border: 1px solid $bttn-disabled;
+
+}
+.btn p {
+	font-size: $btn-fsize;
+	display: inline-block;
+	margin: 0 0;
+}
+
+.btn .links {
+	@include size(13px, 13px);
+	filter: invert(100%);
+	display: inline-block;
+}
+

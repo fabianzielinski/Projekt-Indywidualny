@@ -1,0 +1,38 @@
+label {
+  min-width: 842px;
+  width: 100%;
+  padding: 13px 13px;
+  &:hover {
+    background-color: $basic-disabled;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    opacity: 0;
+
+    + .icon {
+      display: inline-block;
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $basic-disabled;
+      background-color: $basic-white;
+    }
+
+    &:checked + .icon {
+      background-color: $positive-color;
+      checked: checked;
+    }
+  }
+  p {
+      color: $basic-black;
+      line-height: 42px;
+      display: inline-block;
+      margin: 15px 15px;
+    }
+}

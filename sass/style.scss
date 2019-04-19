@@ -1,10 +1,14 @@
 @import "variables";
-// import "mixins";
+@import "mixins";
 
 @import "normalize";
 // import "layout";
-
 @import "typography";
+
+/* Components */
+@import "components/links";
+@import "components/buttons";
+@import "components/checkboxs"
 
 /* Components */
 // import "components/form_field";
