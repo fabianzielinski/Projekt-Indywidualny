@@ -197,5 +197,11 @@ a:hover { color: #FFA200; }
 
 .tabLink .icoTrash { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #a6a6a6; visibility: hidden; }
 
+.oneDigList { display: inline-block; border-bottom: 1px solid #E3E3E3; width: 100vw; max-width: 1100px; margin: 0 10vw 0 10vw; padding: 0; }
+
+.oneDigList .lineHeder { display: inline-block; text-align: left; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; }
+
+.oneDigList .oneDigit { display: inline-block; text-align: right; margin: 0 0 0 72vw; font-size: 16px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
+
 /* Sections */
 /* Pages / Views */
