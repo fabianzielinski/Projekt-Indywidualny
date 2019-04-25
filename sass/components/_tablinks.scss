@@ -1,0 +1,54 @@
+.tabLink {
+	display: inline-block;
+	border-top: 1px solid $bttn-disabled;
+	border-bottom: 1px solid $bttn-disabled;
+	width: 100vw;
+	max-width: 1100px;
+	margin: 0 10vw 0 10vw;
+	padding: 15px;
+	&:hover {
+		cursor: pointer;
+		background-color: $link-hover;
+		.icoLink {
+			visibility: visible;
+		}
+		.icoTrash {
+			visibility: visible;
+		}
+	}
+	.nameLink {
+		display: inline-block;
+		text-align: left;
+		font-size: $lg-link-fsize;
+		line-height: 17px;
+		color: $bttn-secondary;
+		font-family: $font-roboto;
+		font-weight: $heavy-font;
+	}
+	.httpLink {
+		display: inline-block;
+		text-align: center;
+		margin: 0 28vw;
+		font-size: $lg-link-fsize;
+		line-height: 17px;
+		color: $link-color;
+		font-family: $font-roboto;
+		font-weight: $light-font;
+	}
+	.icoLink {
+		display: inline-block;
+		text-align: right;
+		margin: 0 5px;
+		@include size(13px, 13px);
+		color: $bttn-primary;
+		visibility: hidden;
+	}
+	.icoTrash {
+		display: inline-block;
+		text-align: right;
+		margin: 0 5px;
+		@include size(13px, 13px);
+		color: $bttn-secondary;
+		visibility: hidden;
+	}
+}

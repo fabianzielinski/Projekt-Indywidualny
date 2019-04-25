@@ -3,6 +3,7 @@
 /*Components colors*/
 /* Fonts Size */
 /* Fonts */
+/* Font Weight */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
 /** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in iOS. */
@@ -180,6 +181,21 @@ a:hover { color: #FFA200; }
 
 .corortab input[type="checkbox"] ~ label p { display: inline-block; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 300; padding-left: 15px; }
 
-/* Components */
+.tabLink { display: inline-block; border-top: 1px solid #E3E3E3; border-bottom: 1px solid #E3E3E3; width: 100vw; max-width: 1100px; margin: 0 10vw 0 10vw; padding: 15px; }
+
+.tabLink:hover { cursor: pointer; background-color: #F5F5F2; }
+
+.tabLink:hover .icoLink { visibility: visible; }
+
+.tabLink:hover .icoTrash { visibility: visible; }
+
+.tabLink .nameLink { display: inline-block; text-align: left; font-size: 16px; line-height: 17px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; }
+
+.tabLink .httpLink { display: inline-block; text-align: center; margin: 0 28vw; font-size: 16px; line-height: 17px; color: #56819F; font-family: "Roboto", sans-serif; font-weight: 300; }
+
+.tabLink .icoLink { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #F58220; visibility: hidden; }
+
+.tabLink .icoTrash { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #a6a6a6; visibility: hidden; }
+
 /* Sections */
 /* Pages / Views */

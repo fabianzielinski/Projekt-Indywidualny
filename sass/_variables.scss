@@ -24,6 +24,8 @@ $bttn-primary-hvr: $basic-orange-hvr;
 $bttn-secondary: $basic-gray;
 $bttn-secondary-hvr: $basic-gray-hvr;
 $bttn-disabled: $basic-disabled;
+$link-hover: $hover-gray;
+$link-color: $color-tab;
 
 /* Fonts Size */
 
@@ -38,3 +40,12 @@ $btn-fsize: 18px;
 
 $font-roboto: 'Roboto', sans-serif;
 // <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+/* Font Weight */
+
+$light-font: 300;
+$normal-font: 400;
+$average-font: 500;
+$heavy-font: 700;
+
+
