@@ -1,4 +1,9 @@
-.corortab #one ~ label {
+.corortab {
+	display: inline-block;
+	margin: 10px;
+}
+
+.corortab input[type="checkbox"] ~ label {
     display: inline-block;
     margin: .2em;
     cursor: pointer;
@@ -6,7 +11,7 @@
     transition: .3s;
 }
 
-.corortab #one ~ label:hover {
+.corortab input[type="checkbox"] ~ label:hover {
     display: inline-block;
     background-color: $hover-gray;
     padding: 0 1em;
@@ -14,15 +19,15 @@
 	visibility: visible;
 }
 
-.corortab #one ~ label:active {
+.corortab input[type="checkbox"] ~ label:active {
 	transform: scale(.7);
 }
 
-.corortab #one {
+.corortab input[type="checkbox"] {
     display: none;
 }
 
-.corortab #one ~ label:before {
+.corortab input[type="checkbox"] ~ label:before {
     content:"";
     border-color: $color-tab;
     border-radius: 8px;
@@ -33,7 +38,7 @@
 	color: transparent;
 }
 
-.corortab #one:checked ~ label {
+.corortab input[type="checkbox"]:checked ~ label {
 	display: inline-block;
 	background-color: $hover-gray;
 	padding: 0 1em;
@@ -41,7 +46,7 @@
 	visibility: visible;
 }
 
-.corortab #one ~ label p {
+.corortab input[type="checkbox"] ~ label p {
 	display: inline-block;
 	font-size: $lg-link-fsize;
 	line-height: 42px;
@@ -51,12 +56,12 @@
 	padding-left: 15px;
 }
 
-// .corortab input[type=checkbox]:disabled + label:before {
+// .corortab input[type=checkbox]:disabled ~ label:before {
 //   transform: scale(1);
 //   border-color: $basic-disabled;
 // }
 
-// .corortab input[type=checkbox]:checked:disabled + label:before {
+// .corortab input[type=checkbox]:checked:disabled ~ label:before {
 //   transform: scale(1);
 //   background-color: $positive-notifi-hvr;
 //   border-color: $positive-notifi-hvr;

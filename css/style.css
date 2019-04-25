@@ -164,19 +164,21 @@ a:hover { color: #FFA200; }
 
 .checkbox input[type=checkbox]:checked + label:before { background-color: #04AE00; border-color: #04AE00; color: #FFFFFF; }
 
-.corortab #one ~ label { display: inline-block; margin: .2em; cursor: pointer; padding: 0 1em; transition: .3s; }
+.corortab { display: inline-block; margin: 10px; }
 
-.corortab #one ~ label:hover { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
+.corortab input[type="checkbox"] ~ label { display: inline-block; margin: .2em; cursor: pointer; padding: 0 1em; transition: .3s; }
 
-.corortab #one ~ label:active { transform: scale(0.7); }
+.corortab input[type="checkbox"] ~ label:hover { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
 
-.corortab #one { display: none; }
+.corortab input[type="checkbox"] ~ label:active { transform: scale(0.7); }
 
-.corortab #one ~ label:before { content: ""; border-color: #56819F; border-radius: 8px; background-color: #56819F; display: inline-block; width: 16px; height: 16px; color: transparent; }
+.corortab input[type="checkbox"] { display: none; }
 
-.corortab #one:checked ~ label { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
+.corortab input[type="checkbox"] ~ label:before { content: ""; border-color: #56819F; border-radius: 8px; background-color: #56819F; display: inline-block; width: 16px; height: 16px; color: transparent; }
 
-.corortab #one ~ label p { display: inline-block; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 300; padding-left: 15px; }
+.corortab input[type="checkbox"]:checked ~ label { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
+
+.corortab input[type="checkbox"] ~ label p { display: inline-block; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 300; padding-left: 15px; }
 
 /* Components */
 /* Sections */
