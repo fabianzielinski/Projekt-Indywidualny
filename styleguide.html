@@ -28,30 +28,48 @@
 
         <!-- Links -->
 
-        <a href="#" class="link-small">Link small<a/><br>
-        <a href="#" class="link-large">Link large<a/><br><br>
-        <img class="show" src="images/show.svg"><br>
+        <a href="#" class="link-small">Link small</a><br>
+        <a href="#" class="link-large">Link large</a><br><br>
+
+        <img class="show" src="images/show.svg" alt=""><br>
+
         <a href="http://wp.pl">
-            <img class="show" src="images/show.svg">
-        <a/><br><br>
+            <img class="show" src="images/show.svg" alt="">
+        </a><br><br>
 
         <!-- Buttons -->
 
-        <div class="btn btn-prim">Button</div>
-        <div class="btn btn-sec">Button</div><br>
+        <div type="submit" class="btn btn-prim">Button</div>
+        <div type="submit" class="btn btn-sec">Button</div><br>
         <div class="btn btn-disabled">
-            <img class="links" src="images/links.svg">
+            <img class="links" src="images/links.svg" alt="">
             <p>Disabled button</p>
         </div><br><br>
 
         <!-- Checkbox -->
 
-        <label>
-            <input type="checkbox">
-            <div class="icon"></div>
-            <p>Chack me...</p>
-            <img class="show" src="images/show.svg">
-        </label>
+        <form class="checkbox">
+            <input type="checkbox" id="fruit1" name="fruit-1" value="Check ...">
+            <label for="fruit1">
+                Check ...
+                <img class="show" src="images/show.svg" alt="">
+            </label>
+        </form>
+        <form class="checkbox">
+            <input type="checkbox" id="fruit2" name="fruit-2" value="Check  to ...">
+            <label for="fruit2">
+                Check to ...
+                <img class="show" src="images/show.svg" alt="">
+            </label>
+        </form><br><br>
+
+        <!-- Coror tab -->
+        <form class="corortab">
+            <input type="checkbox" id="one" name="cheb1" value="cheb1">
+            <label for="one">
+                <p>Takie tam ....</p>
+            </label>
+        </form><br><br>
 
         <script type="text/javascript" src="js/script.js"></script>
     </body>

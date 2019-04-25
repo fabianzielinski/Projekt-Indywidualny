@@ -1,57 +1,60 @@
-label {
-  box-sizing: border-box;
-  position: relative;
-  min-width: 242px;
-  width: 100%;
-  padding: 13px 13px;
-  &:hover {
-    background-color: $basic-disabled;
+.checkbox input[type=checkbox] + label{
+    display: inline-block;
+    margin: .2em;
     cursor: pointer;
-  }
-
-  input[type="checkbox"] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 10px 14px;
-    width: 18px;
-    height: 18px;
-    opacity: 0;
-
-    + .icon {
-      display: inline-block;
-      position: relative;
-      left: 0;
-      top: 0;
-      width: 18px;
-      height: 18px;
-      border: 1px solid $basic-disabled;
-      background-color: $basic-white;
-    }
-
-    &:checked + .icon {
-      background-color: $positive-color;
-      checked: checked;
-    }
-
-    &:checked + .icon:before {
-      content: "\2714";
-      border: 1px solid $positive-color;
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      padding-left: 0.2em;
-      // padding-bottom: 0.3em;
-      // margin-right: 0.2px;
-      color: transparent;
-    }
-
-  }
-
-  p {
-      color: $basic-black;
-      line-height: 42px;
-      display: inline-block;
-      margin: 13px 23px;
+    padding: 1em;
+    color: $basic-black;
+    img {
+      visibility: hidden;
     }
 }
+
+.checkbox input[type=checkbox] + label:hover{
+  display: inline-block;
+  background-color: $hover-gray;
+  padding: 1em;
+  visibility: visible;
+  img {
+    visibility: visible;
+    margin-left: 150px;
+  }
+}
+
+.checkbox input[type=checkbox] {
+  display: none;
+}
+
+.checkbox input[type=checkbox] + label:before {
+  content:"\2714";
+  border: 0.1em solid $basic-disabled;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: .2em;
+  padding-bottom: .2em;
+  margin-right: .2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+.checkbox input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.checkbox input[type=checkbox]:checked + label:before {
+  background-color: $positive-color;
+  border-color: $positive-color;
+  color: $basic-white;
+}
+
+// .checkbox input[type=checkbox]:disabled + label:before {
+//   transform: scale(1);
+//   border-color: $basic-disabled;
+// }
+
+// .checkbox input[type=checkbox]:checked:disabled + label:before {
+//   transform: scale(1);
+//   background-color: $positive-notifi-hvr;
+//   border-color: $positive-notifi-hvr;
+// }

@@ -1,0 +1,63 @@
+.corortab #one ~ label {
+    display: inline-block;
+    margin: .2em;
+    cursor: pointer;
+    padding: 0 1em;
+    transition: .3s;
+}
+
+.corortab #one ~ label:hover {
+    display: inline-block;
+    background-color: $hover-gray;
+    padding: 0 1em;
+    border-radius: 3px;
+	visibility: visible;
+}
+
+.corortab #one ~ label:active {
+	transform: scale(.7);
+}
+
+.corortab #one {
+    display: none;
+}
+
+.corortab #one ~ label:before {
+    content:"";
+    border-color: $color-tab;
+    border-radius: 8px;
+    background-color: $color-tab;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+	color: transparent;
+}
+
+.corortab #one:checked ~ label {
+	display: inline-block;
+	background-color: $hover-gray;
+	padding: 0 1em;
+	border-radius: 3px;
+	visibility: visible;
+}
+
+.corortab #one ~ label p {
+	display: inline-block;
+	font-size: $lg-link-fsize;
+	line-height: 42px;
+	color: $bttn-secondary;
+	font-family: $font-roboto;
+	font-weight: 300;
+	padding-left: 15px;
+}
+
+// .corortab input[type=checkbox]:disabled + label:before {
+//   transform: scale(1);
+//   border-color: $basic-disabled;
+// }
+
+// .corortab input[type=checkbox]:checked:disabled + label:before {
+//   transform: scale(1);
+//   background-color: $positive-notifi-hvr;
+//   border-color: $positive-notifi-hvr;
+// }
