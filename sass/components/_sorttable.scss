@@ -1,0 +1,62 @@
+.columnName {
+	display: inline-block;
+	margin: 10px;
+}
+
+.columnName input[type="radio"] + label {
+    display: inline-block;
+	font-size: $lg-link-fsize;
+	line-height: 42px;
+	color: $bttn-secondary;
+	font-family: $font-roboto;
+	font-weight: 300;
+    margin: .2em;
+    cursor: pointer;
+    padding: 0 1em;
+    transition: .3s;
+}
+
+.columnName input[type="radio"] + label:hover {
+    display: inline-block;
+    background-color: $hover-gray;
+    padding: 0 1em;
+    border-radius: 3px;
+	visibility: visible;
+}
+
+.columnName input[type="radio"] + label:active {
+	transform: scale(.7);
+}
+
+.columnName input[type="radio"] {
+    display: none;
+}
+
+.columnName input[type="radio"] + label:after {
+    content:"";
+    border-color: $color-tab;
+    border-radius: 8px;
+    background-color: $color-tab;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+	color: transparent;
+}
+
+.columnName input[type="radio"]:checked + label {
+	display: inline-block;
+	background-color: $hover-gray;
+	padding: 0 1em;
+	border-radius: 3px;
+	visibility: visible;
+}
+
+// .columnName input[type="radio"] ~ label p {
+// 	display: inline-block;
+// 	font-size: $lg-link-fsize;
+// 	line-height: 42px;
+// 	color: $bttn-secondary;
+// 	font-family: $font-roboto;
+// 	font-weight: 300;
+// 	padding-left: 15px;
+// }
