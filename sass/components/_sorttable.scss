@@ -1,62 +1,78 @@
-.columnName {
+.sort-Table {
 	display: inline-block;
-	margin: 10px;
+	margin: 2em;
+	padding: 1em;
 }
 
-.columnName input[type="radio"] + label {
+.sort-Table .row {
+	border-bottom: 1px solid $bttn-disabled;
+	&:hover .sort-digitals {
+		background-color: $link-hover;
+		cursor: pointer;
+	}
+}
+
+.sort-Table .sort-bttn label {
     display: inline-block;
 	font-size: $lg-link-fsize;
-	line-height: 42px;
+	line-height: 15px;
 	color: $bttn-secondary;
 	font-family: $font-roboto;
-	font-weight: 300;
-    margin: .2em;
-    cursor: pointer;
-    padding: 0 1em;
+	font-weight: $heavy-font;
+    margin: 2em;
+    padding: 1em;
     transition: .3s;
 }
 
-.columnName input[type="radio"] + label:hover {
+.sort-Table .sort-bttn > input[type="radio"] + label:hover {
     display: inline-block;
     background-color: $hover-gray;
-    padding: 0 1em;
+    padding: 1em;
     border-radius: 3px;
-	visibility: visible;
+    color: $checked-digital;
+    cursor: pointer;
+	.icoArrowup{
+		visibility: visible;
+	}
 }
 
-.columnName input[type="radio"] + label:active {
-	transform: scale(.7);
+.sort-Table .sort-bttn > input[type="radio"]:checked + label {
+    display: inline-block;
+    background-color: $link-hover;
+    padding: 1em;
+    border-radius: 3px;
+	color: $checked-digital;
+	.icoArrowup {
+		visibility: visible;
+	}
 }
 
-.columnName input[type="radio"] {
+.sort-Table .sort-bttn input[type="radio"] + label:active {
+	transform: scale(0);
+}
+
+
+.sort-Table .sort-bttn input[type="radio"] {
     display: none;
 }
 
-.columnName input[type="radio"] + label:after {
-    content:"";
-    border-color: $color-tab;
-    border-radius: 8px;
-    background-color: $color-tab;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-	color: transparent;
-}
-
-.columnName input[type="radio"]:checked + label {
+.sort-Table .sort-bttn label .icoArrowup {
 	display: inline-block;
-	background-color: $hover-gray;
-	padding: 0 1em;
-	border-radius: 3px;
-	visibility: visible;
+	text-align: right;
+	margin: 0 5px;
+	@include size(10px, 10px);
+	color: $bttn-secondary;
+	fill: currentColor;
+	visibility: hidden;
 }
 
-// .columnName input[type="radio"] ~ label p {
-// 	display: inline-block;
-// 	font-size: $lg-link-fsize;
-// 	line-height: 42px;
-// 	color: $bttn-secondary;
-// 	font-family: $font-roboto;
-// 	font-weight: 300;
-// 	padding-left: 15px;
-// }
+.sort-Table .sort-digitals {
+	font-size: 13px;
+	line-height: 17px;
+	color: #333333;
+	font-family: "Roboto";
+	font-weight: 300;
+	margin: 0;
+	padding: 2em 4em;
+}
+

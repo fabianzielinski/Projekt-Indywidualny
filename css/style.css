@@ -253,7 +253,7 @@ a:hover { color: #FFA200; }
 
 .tabLink .httpLink { display: inline-block; text-align: center; margin: 0 28vw; font-size: 16px; line-height: 17px; color: #56819F; font-family: "Roboto", sans-serif; font-weight: 300; }
 
-.tabLink .icoLink { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #F58220; visibility: hidden; }
+.tabLink .icoLink { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #F58220; fill: #F58220; visibility: hidden; }
 
 .tabLink .icoTrash { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #a6a6a6; visibility: hidden; }
 
@@ -262,6 +262,30 @@ a:hover { color: #FFA200; }
 .oneDigList .lineHeder { display: inline-block; text-align: left; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; }
 
 .oneDigList .oneDigit { display: inline-block; text-align: right; margin: 0 0 0 72vw; font-size: 16px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
+
+.sort-Table { display: inline-block; margin: 2em; padding: 1em; }
+
+.sort-Table .row { border-bottom: 1px solid #E3E3E3; }
+
+.sort-Table .row:hover .sort-digitals { background-color: #F5F5F2; cursor: pointer; }
+
+.sort-Table .sort-bttn label { display: inline-block; font-size: 16px; line-height: 15px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; margin: 2em; padding: 1em; transition: .3s; }
+
+.sort-Table .sort-bttn > input[type="radio"] + label:hover { display: inline-block; background-color: #F5F5F2; padding: 1em; border-radius: 3px; color: #333333; cursor: pointer; }
+
+.sort-Table .sort-bttn > input[type="radio"] + label:hover .icoArrowup { visibility: visible; }
+
+.sort-Table .sort-bttn > input[type="radio"]:checked + label { display: inline-block; background-color: #F5F5F2; padding: 1em; border-radius: 3px; color: #333333; }
+
+.sort-Table .sort-bttn > input[type="radio"]:checked + label .icoArrowup { visibility: visible; }
+
+.sort-Table .sort-bttn input[type="radio"] + label:active { transform: scale(0); }
+
+.sort-Table .sort-bttn input[type="radio"] { display: none; }
+
+.sort-Table .sort-bttn label .icoArrowup { display: inline-block; text-align: right; margin: 0 5px; width: 10px; height: 10px; color: #a6a6a6; fill: currentColor; visibility: hidden; }
+
+.sort-Table .sort-digitals { font-size: 13px; line-height: 17px; color: #333333; font-family: "Roboto"; font-weight: 300; margin: 0; padding: 2em 4em; }
 
 /* Sections */
 /* Pages / Views */

@@ -41,6 +41,7 @@
 		margin: 0 5px;
 		@include size(13px, 13px);
 		color: $bttn-primary;
+		fill: $bttn-primary;
 		visibility: hidden;
 	}
 	.icoTrash {
