@@ -287,5 +287,31 @@ a:hover { color: #FFA200; }
 
 .sort-Table .sort-digitals { font-size: 13px; line-height: 17px; color: #333333; font-family: "Roboto"; font-weight: 300; margin: 0; padding: 2em 4em; }
 
+* { box-sizing: border-box; }
+
+.date-period { margin: 20px; padding: 0px; border: 1px solid #E3E3E3; border-radius: 3px; display: inline-block; }
+
+.date-period:hover { border-color: #333333; cursor: pointer; }
+
+.date-period:hover .date-start { border-color: #333333; }
+
+.date-period div { display: inline-block; margin: 5px 5px; font-size: 14px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
+
+.date-period .date-start { padding: 5px 50px 5px 5px; border-right: 1px solid #E3E3E3; }
+
+.date-period .date-end { position: relative; }
+
+.date-period input[type="date"] { background: rgba(0, 0, 0, 0); border: none; }
+
+.date-period input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; }
+
+.date-period input[type="date"]::-webkit-inner-spin-button { opacity: 0; }
+
+.date-period input[type="date"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.date-period .date-end input[type="date"] ~ .ico-calendar { position: absolute; width: 14px; height: 14px; fill: #E3E3E3; display: inline-block; z-index: -1; top: 15px; right: 2px; }
+
+.date-period:hover .date-end input[type="date"] ~ .ico-calendar { fill: #333333; }
+
 /* Sections */
 /* Pages / Views */
