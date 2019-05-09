@@ -1,0 +1,98 @@
+.main {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 92vh;
+	&-side-bar {
+		background-color: black;
+		width: 200px;
+		position: relative;
+		p {
+			background-color: black;
+			padding: 15px;
+			position: absolute;
+			top: -80px;
+			left: 0px;
+			color: white;
+			font-size: 24px;
+			z-index: -1;
+			width: 200px;
+		}
+		input[type="checkbox"] {
+			display: inline-block;
+		    width: 40px;
+		    height: 32px;
+		    position: absolute;
+		    top: -43px;
+		    left: 150px;
+		    cursor: pointer;
+		    opacity: 0; /* hide this */
+		    z-index: 1; /* and place it over the hamburger */
+		    -webkit-touch-callout: none;
+		    &:checked ~ .main-side-bar-hamburger span {
+		    	opacity: 1;
+			    transform: rotate(45deg) translate(-2px, -1px);
+			    background: black;
+		    }
+		}
+		.main-side-bar-hamburger {
+			display: inline-block;
+			position: absolute;
+			top: -40px;
+			left: 153px;
+			z-index: 2;
+			span {
+				display: block;
+			    width: 33px;
+			    height: 4px;
+			    margin-bottom: 5px;
+			    position: relative;
+			    background: #cdcdcd;
+			    border-radius: 3px;
+			    z-index: 0;
+			    transform-origin: 4px 0px;
+			    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+			                opacity 0.55s ease;
+				&:first-child {
+    				transform-origin: 0% 0%;
+				}
+				&:nth-last-child(2) {
+					transform-origin: 0% 100%;
+				}
+			}
+		}
+	}
+	&-content {
+		width: 100%;
+		background-color: red;
+	}
+}
+
+.top-menu {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	&-lg, &-sm {
+		border-left: 1px solid lightgray;
+		padding: 15px;
+		img {
+			@include size(20px, 20px);
+			margin: 0 15px;
+			z-index: -1;
+		}
+		.ico-Arrowdown {
+			@include size(10px, 10px);
+		}
+		.orange-disc {
+			@include size(10px, 10px);
+			border-round: 5px;
+			background: orange;
+			z-index: 1;
+			position: absolute;
+			display: inline-block;
+		}
+		.ico-Bell {
+			position: relative;
+		}
+	}
+}

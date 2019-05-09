@@ -296,13 +296,15 @@ a:hover { color: #FFA200; }
 
 .date-period:hover .date-start { border-color: #333333; }
 
-.date-period div { display: inline-block; margin: 5px 5px; font-size: 14px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
+.date-period div { display: inline-block; font-size: 14px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
 
-.date-period .date-start { padding: 5px 50px 5px 5px; border-right: 1px solid #E3E3E3; }
+.date-period .date-start { position: relative; border-right: 1px solid #E3E3E3; }
 
 .date-period .date-end { position: relative; }
 
-.date-period input[type="date"] { background: rgba(0, 0, 0, 0); border: none; }
+.date-period input { background: rgba(0, 0, 0, 0); border: none; line-height: 42px; display: block; }
+
+.date-period input:focus { outline: none; }
 
 .date-period input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0; }
 
@@ -314,13 +316,15 @@ a:hover { color: #FFA200; }
 
 .date-period:hover .date-end input[type="date"] ~ .ico-calendar { fill: #333333; }
 
+input[type="date"]::-webkit-calendar-picker-indicator { background: transparent; bottom: 0; color: transparent; cursor: pointer; height: auto; left: 0; position: absolute; right: 0; top: 0; width: auto; }
+
 body { margin: 0; padding: 0; /* make it look decent enough */ background: white; color: #cdcdcd; }
 
 a { text-decoration: none; color: black; transition: color 0.3s ease; }
 
 a:hover { color: tomato; }
 
-.sidebar-menuToggle { display: block; position: relative; top: 50px; left: 50px; z-index: 1; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.sidebar-menuToggle { position: relative; top: 50px; left: 50px; z-index: 1; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
 .sidebar-menuToggle input[type="checkbox"] { display: block; width: 40px; height: 32px; position: absolute; top: -7px; left: -5px; cursor: pointer; opacity: 0; /* hide this */ z-index: 2; /* and place it over the hamburger */ -webkit-touch-callout: none; }
 
@@ -341,7 +345,7 @@ a:hover { color: tomato; }
 .sidebar-menuToggle input[type="checkbox"]:checked ~ span:nth-last-child(2) { transform: rotate(-45deg) translate(0, -1px); }
 
 /* Make this absolute positioned at the top left of the screen */
-.sidebar-menuToggle input[type="checkbox"] ~ ul { position: absolute; width: 300px; margin: -100px 0 0 -50px; padding: 50px; padding-top: 125px; background: lightgray; list-style-type: none; transform-origin: 0% 0%; transform: translate(-100%, 0); transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+.sidebar-menuToggle input[type="checkbox"] ~ ul { position: absolute; width: 200px; margin: -100px 0 0 -50px; padding: 50px; padding-top: 125px; background: lightgray; list-style-type: none; transform-origin: 0% 0%; transform: translate(-100%, 0); transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
 
 .sidebar-menu li { padding: 10px 0; font-size: 22px; }
 
@@ -349,4 +353,36 @@ a:hover { color: tomato; }
 .sidebar-menuToggle input[type="checkbox"]:checked ~ ul { transform: none; }
 
 /* Sections */
+.main { display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; height: 92vh; }
+
+.main-side-bar { background-color: black; width: 200px; position: relative; }
+
+.main-side-bar p { background-color: black; padding: 15px; position: absolute; top: -80px; left: 0px; color: white; font-size: 24px; z-index: -1; width: 200px; }
+
+.main-side-bar input[type="checkbox"] { display: inline-block; width: 40px; height: 32px; position: absolute; top: -43px; left: 150px; cursor: pointer; opacity: 0; /* hide this */ z-index: 1; /* and place it over the hamburger */ -webkit-touch-callout: none; }
+
+.main-side-bar input[type="checkbox"]:checked ~ .main-side-bar-hamburger span { opacity: 1; transform: rotate(45deg) translate(-2px, -1px); background: black; }
+
+.main-side-bar .main-side-bar-hamburger { display: inline-block; position: absolute; top: -40px; left: 153px; z-index: 2; }
+
+.main-side-bar .main-side-bar-hamburger span { display: block; width: 33px; height: 4px; margin-bottom: 5px; position: relative; background: #cdcdcd; border-radius: 3px; z-index: 0; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+
+.main-side-bar .main-side-bar-hamburger span:first-child { transform-origin: 0% 0%; }
+
+.main-side-bar .main-side-bar-hamburger span:nth-last-child(2) { transform-origin: 0% 100%; }
+
+.main-content { width: 100%; background-color: red; }
+
+.top-menu { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; width: 100%; }
+
+.top-menu-lg, .top-menu-sm { border-left: 1px solid lightgray; padding: 15px; }
+
+.top-menu-lg img, .top-menu-sm img { width: 20px; height: 20px; margin: 0 15px; z-index: -1; }
+
+.top-menu-lg .ico-Arrowdown, .top-menu-sm .ico-Arrowdown { width: 10px; height: 10px; }
+
+.top-menu-lg .orange-disc, .top-menu-sm .orange-disc { width: 10px; height: 10px; border-round: 5px; background: orange; z-index: 1; position: absolute; display: inline-block; }
+
+.top-menu-lg .ico-Bell, .top-menu-sm .ico-Bell { position: relative; }
+
 /* Pages / Views */

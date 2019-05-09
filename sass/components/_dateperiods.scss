@@ -19,25 +19,31 @@
 
 .date-period div {
 	display: inline-block;
-	margin: 5px 5px;
+	// margin: 5px 5px;
 	font-size: $text-fsize;
-	line-height: 42px;
+	// line-height: 42px;
 	color: $checked-digital;
 	font-family: $font-roboto;
 	font-weight: $light-font;
 }
 
 .date-period .date-start {
-	padding: 5px 50px 5px 5px;
+	// padding: 5px 50px 5px 5px;
+	position: relative;
 	border-right: 1px solid $bttn-disabled;
 }
 
 .date-period .date-end {
 	position: relative;
 }
-.date-period input[type="date"] {
+.date-period input {
 	background:rgba(0,0,0,0);
 	border: none;
+	line-height: 42px;
+	display: block;
+	&:focus {
+		outline: none;
+	}
 }
 
 .date-period input[type="date"]::-webkit-calendar-picker-indicator {
@@ -67,3 +73,15 @@
 	fill: $checked-digital;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
