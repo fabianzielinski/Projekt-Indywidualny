@@ -1,6 +1,7 @@
 
 /* Colors */
 
+$bg-black: #191919;
 $basic-black: #333333;
 $basic-white: #FFFFFF;
 $basic-gray: #a6a6a6;
@@ -27,6 +28,7 @@ $bttn-disabled: $basic-disabled;
 $link-hover: $hover-gray;
 $link-color: $color-tab;
 $checked-digital: $basic-black;
+$sidebar-bg-color: $bg-black;
 
 /* Fonts Size */
 
@@ -36,11 +38,14 @@ $section-header-fsize: 16px;
 $lg-link-fsize: 16px;
 $sm-link-fsize: 13px;
 $btn-fsize: 18px;
+$logo-fsize: 36px;
 
 /* Fonts */
 
 $font-roboto: 'Roboto', sans-serif;
 // <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+$font-caveat: 'Caveat', cursive;
+// @import url('https://fonts.googleapis.com/css?family=Caveat');
 
 /* Font Weight */
 
