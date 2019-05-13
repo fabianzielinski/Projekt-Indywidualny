@@ -13,16 +13,18 @@
 		.ico-Arrowdown {
 			@include size(10px, 10px);
 		}
-		.orange-disc {
-			@include size(10px, 10px);
-			border-round: 5px;
-			background: orange;
-			z-index: 1;
-			position: absolute;
-			display: inline-block;
-		}
 		.ico-Bell {
 			position: relative;
+			& ~ .orange-disc {
+				@include size(7px, 7px);
+				border-radius: 5px;
+				background-color: orange;
+				z-index: 1;
+				position: absolute;
+				left: 1023px;
+				top: 14px;
+				display: inline-block;
+			}
 		}
 	}
 }
@@ -42,7 +44,7 @@
 		font-size: $logo-fsize;
 		font-weight: $heavy-font;
 		z-index: 1;
-		width: 235px;
+		width: 220px;
 	}
 	input[type="checkbox"] {
 		display: inline-block;
@@ -50,7 +52,7 @@
 	    height: 32px;
 	    position: absolute;
 	    top: 12px;
-	    left: 180px;
+	    left: 170px;
 	    cursor: pointer;
 	    opacity: 0; /* hide this */
 	    z-index: 3; /* and place it over the hamburger */
@@ -59,7 +61,7 @@
 			transform: none;
 		}
 		&:checked ~ .main-side-bar {
-			width: 284px;
+			width: 263px;
 			// transform: translate(-235px, 0);
 			// transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 		}
@@ -89,7 +91,6 @@
 		    position: absolute;
 			width: 250px;
 		    margin: -100px 0 0 -50px;
-		    // padding: 50px;
 		    padding-top: 125px;
 		    list-style-type: none;
 		    transform-origin: 0% 0%;
@@ -101,37 +102,43 @@
 		    	color: #818181;
 		    	padding: 10px 10px;
 		    	margin: 0 15px;
-				font-size: 22px;
+				font-size: $text-fsize;
+				line-height: 20px;
+				font-family: $font-roboto;
+				font-weight: $light-font;
+				&:hover {
+					background-color: #282828;
+					color: $bttn-color;
+					cursor: pointer;
+					width: 100%;
+					border-top: 1px solid $bttn-secondary;
+					border-bottom: 1px solid $bttn-secondary;
+					& svg {
+						fill: $bttn-color;
+					}
+				}
+				&:active {
+					background-color: #282828;
+					color: $bttn-color;
+					cursor: pointer;
+					width: 100%;
+					border-top: 1px solid $bttn-secondary;
+					border-bottom: 1px solid $bttn-secondary;
+					border-left: 4px solid $bttn-primary;
+					& svg {
+						fill: $bttn-color;
+					}
+				}
 		    }
 		    li {
 		    	display: inline-block;
 		    	padding: 5px;
 		    	margin: 0 10px;
 		    }
-		    .ico-General {
+		    svg {
 		    	display: inline-block;
-		    	@include size(20px, 20px);
-		    	fill: #818181;
-		    }
-		    .ico-Details {
-		    	display: inline-block;
-		    	@include size(20px, 20px);
-		    	fill: #818181;
-		    }
-		    .ico-Links {
-		    	display: inline-block;
-		    	@include size(20px, 20px);
-		    	fill: #818181;
-		    }
-		    .ico-Baners {
-		    	display: inline-block;
-		    	@include size(20px, 20px);
-		    	fill: #818181;
-		    }
-		    .ico-Personal {
-		    	display: inline-block;
-		    	@include size(20px, 20px);
-		    	fill: #818181;
+		    	@include size(15px, 15px);
+		    	fill: $bttn-secondary;
 		    }
 		}
 
@@ -139,7 +146,7 @@
 		display: inline-block;
 		position: absolute;
 		top: 15px;
-		left: 183px;
+		left: 173px;
 		z-index: 1;
 		span {
 			display: block;

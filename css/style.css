@@ -362,19 +362,19 @@ a:hover { color: tomato; }
 
 .top-menu-lg .ico-Arrowdown, .top-menu-sm .ico-Arrowdown { width: 10px; height: 10px; }
 
-.top-menu-lg .orange-disc, .top-menu-sm .orange-disc { width: 10px; height: 10px; border-round: 5px; background: orange; z-index: 1; position: absolute; display: inline-block; }
-
 .top-menu-lg .ico-Bell, .top-menu-sm .ico-Bell { position: relative; }
+
+.top-menu-lg .ico-Bell ~ .orange-disc, .top-menu-sm .ico-Bell ~ .orange-disc { width: 7px; height: 7px; border-radius: 5px; background-color: orange; z-index: 1; position: absolute; left: 1023px; top: 14px; display: inline-block; }
 
 .main { display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; height: 92vh; }
 
-.main p { background-color: #191919; padding: 7px 15px; position: absolute; top: -37px; left: 0px; color: white; font-family: "Caveat", cursive; font-size: 36px; font-weight: 700; z-index: 1; width: 235px; }
+.main p { background-color: #191919; padding: 7px 15px; position: absolute; top: -37px; left: 0px; color: white; font-family: "Caveat", cursive; font-size: 36px; font-weight: 700; z-index: 1; width: 220px; }
 
-.main input[type="checkbox"] { display: inline-block; width: 40px; height: 32px; position: absolute; top: 12px; left: 180px; cursor: pointer; opacity: 0; /* hide this */ z-index: 3; /* and place it over the hamburger */ -webkit-touch-callout: none; }
+.main input[type="checkbox"] { display: inline-block; width: 40px; height: 32px; position: absolute; top: 12px; left: 170px; cursor: pointer; opacity: 0; /* hide this */ z-index: 3; /* and place it over the hamburger */ -webkit-touch-callout: none; }
 
 .main input[type="checkbox"]:checked ~ .main-side-bar ul { transform: none; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar { width: 284px; }
+.main input[type="checkbox"]:checked ~ .main-side-bar { width: 263px; }
 
 .main input[type="checkbox"]:checked ~ .main-side-bar-hamburger span { opacity: 1; transform: rotate(-45deg) translate(-2px, -1px); background: #bcbcbc; }
 
@@ -386,21 +386,21 @@ a:hover { color: tomato; }
 
 .main ul { position: absolute; width: 250px; margin: -100px 0 0 -50px; padding-top: 125px; list-style-type: none; transform-origin: 0% 0%; transform: translate(-100%, 0); transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); z-index: 0; }
 
-.main ul a { display: inline-block; color: #818181; padding: 10px 10px; margin: 0 15px; font-size: 22px; }
+.main ul a { display: inline-block; color: #818181; padding: 10px 10px; margin: 0 15px; font-size: 14px; line-height: 20px; font-family: "Roboto", sans-serif; font-weight: 300; }
+
+.main ul a:hover { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 100%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; }
+
+.main ul a:hover svg { fill: #FFFFFF; }
+
+.main ul a:active { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 100%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; border-left: 4px solid #F58220; }
+
+.main ul a:active svg { fill: #FFFFFF; }
 
 .main ul li { display: inline-block; padding: 5px; margin: 0 10px; }
 
-.main ul .ico-General { display: inline-block; width: 20px; height: 20px; fill: #818181; }
+.main ul svg { display: inline-block; width: 15px; height: 15px; fill: #a6a6a6; }
 
-.main ul .ico-Details { display: inline-block; width: 20px; height: 20px; fill: #818181; }
-
-.main ul .ico-Links { display: inline-block; width: 20px; height: 20px; fill: #818181; }
-
-.main ul .ico-Baners { display: inline-block; width: 20px; height: 20px; fill: #818181; }
-
-.main ul .ico-Personal { display: inline-block; width: 20px; height: 20px; fill: #818181; }
-
-.main-side-bar-hamburger { display: inline-block; position: absolute; top: 15px; left: 183px; z-index: 1; }
+.main-side-bar-hamburger { display: inline-block; position: absolute; top: 15px; left: 173px; z-index: 1; }
 
 .main-side-bar-hamburger span { display: block; width: 33px; height: 4px; margin-bottom: 5px; position: relative; background: #bcbcbc; border-radius: 3px; z-index: 1; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 
@@ -409,5 +409,7 @@ a:hover { color: tomato; }
 .main-side-bar-hamburger span:nth-last-child(2) { transform-origin: 0% 100%; }
 
 .main-content { width: 100%; background-color: #E3E3E3; }
+
+.main-content-generalstat { margin: 15px; height: 798px; width: 100%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #ffffff; }
 
 /* Pages / Views */
