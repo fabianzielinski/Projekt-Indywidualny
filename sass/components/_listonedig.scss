@@ -1,9 +1,9 @@
 .oneDigList {
 	display: inline-block;
 	border-bottom: 1px solid $bttn-disabled;
-	width: 100vw;
-	max-width: 1100px;
-	margin: 0 10vw 0 10vw;
+	// width: 80%;
+	// max-width: 1100px;
+	margin: 0 10% 0 10%;
 	padding: 0;
 	.lineHeder {
 		display: inline-block;
@@ -17,7 +17,7 @@
 	.oneDigit {
 		display: inline-block;
 		text-align: right;
-		margin: 0 0 0 72vw;
+		margin: 0 0 0 72px;
 		font-size: $lg-link-fsize;
 		line-height: 42px;
 		color: $basic-black;

@@ -1,5 +1,5 @@
 /* Var */
-@import url('https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Caveat");
 /* Colors */
 /*Components colors*/
@@ -231,7 +231,7 @@ a:hover { color: #FFA200; }
 
 .corortab input[type="checkbox"] ~ label { display: inline-block; margin: .2em; cursor: pointer; padding: 0 1em; transition: .3s; }
 
-.corortab input[type="checkbox"] ~ label:hover { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
+.corortab input[type="checkbox"] ~ label:hover { display: inline-block; background-color: #F5F5F2; padding: 0 2em; border-radius: 3px; visibility: visible; }
 
 .corortab input[type="checkbox"] ~ label:active { transform: scale(0.7); }
 
@@ -239,7 +239,7 @@ a:hover { color: #FFA200; }
 
 .corortab input[type="checkbox"] ~ label:before { content: ""; border-color: #56819F; border-radius: 8px; background-color: #56819F; display: inline-block; width: 16px; height: 16px; color: transparent; }
 
-.corortab input[type="checkbox"]:checked ~ label { display: inline-block; background-color: #F5F5F2; padding: 0 1em; border-radius: 3px; visibility: visible; }
+.corortab input[type="checkbox"]:checked ~ label { display: inline-block; background-color: #F5F5F2; padding: 0 2em; border-radius: 3px; visibility: visible; }
 
 .corortab input[type="checkbox"] ~ label p { display: inline-block; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 300; padding-left: 15px; }
 
@@ -259,11 +259,11 @@ a:hover { color: #FFA200; }
 
 .tabLink .icoTrash { display: inline-block; text-align: right; margin: 0 5px; width: 13px; height: 13px; color: #a6a6a6; visibility: hidden; }
 
-.oneDigList { display: inline-block; border-bottom: 1px solid #E3E3E3; width: 100vw; max-width: 1100px; margin: 0 10vw 0 10vw; padding: 0; }
+.oneDigList { display: inline-block; border-bottom: 1px solid #E3E3E3; margin: 0 10% 0 10%; padding: 0; }
 
 .oneDigList .lineHeder { display: inline-block; text-align: left; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; }
 
-.oneDigList .oneDigit { display: inline-block; text-align: right; margin: 0 0 0 72vw; font-size: 16px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
+.oneDigList .oneDigit { display: inline-block; text-align: right; margin: 0 0 0 72px; font-size: 16px; line-height: 42px; color: #333333; font-family: "Roboto", sans-serif; font-weight: 300; }
 
 .sort-Table { display: inline-block; margin: 2em; padding: 1em; }
 
@@ -313,7 +313,7 @@ a:hover { color: #FFA200; }
 
 .date-period input[type="date"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
-.date-period .date-end input[type="date"] ~ .ico-calendar { position: absolute; width: 14px; height: 14px; fill: #E3E3E3; display: inline-block; z-index: -1; top: 15px; right: 2px; }
+.date-period .date-end input[type="date"] ~ .ico-calendar { position: absolute; width: 14px; height: 14px; fill: #E3E3E3; display: inline-block; z-index: 1; top: 15px; right: 5px; }
 
 .date-period:hover .date-end input[type="date"] ~ .ico-calendar { fill: #333333; }
 
@@ -368,39 +368,39 @@ a:hover { color: tomato; }
 
 .main { display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; height: 92vh; }
 
-.main p { background-color: #191919; padding: 7px 15px; position: absolute; top: -37px; left: 0px; color: white; font-family: "Caveat", cursive; font-size: 36px; font-weight: 700; z-index: 1; width: 220px; }
+.main p { display: none; width: 55px; transition: width .5s; }
 
-.main input[type="checkbox"] { display: inline-block; width: 40px; height: 32px; position: absolute; top: 12px; left: 170px; cursor: pointer; opacity: 0; /* hide this */ z-index: 3; /* and place it over the hamburger */ -webkit-touch-callout: none; }
+.main p.open { background-color: #191919; padding: 7px 15px; position: absolute; top: -37px; left: 0px; color: white; font-family: "Caveat", cursive; font-size: 36px; font-weight: 700; z-index: 1; width: 220px; display: inline-block; transition: width .5s; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar ul { transform: none; }
+.main-side-bar { background-color: #191919; width: 55px; transition: width .5s; position: relative; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar { width: 263px; }
+.main-side-bar.open { width: 263px; transition: width .5s; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar-hamburger span { opacity: 1; transform: rotate(-45deg) translate(-2px, -1px); background: #bcbcbc; }
+.main-side-bar ul { position: absolute; margin: -100px 0 0 -50px; padding-top: 125px; z-index: 0; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar-hamburger span:nth-last-child(2) { opacity: 0; transform: rotate(0deg) scale(0.2, 0.2); }
+.main-side-bar ul li { display: none; }
 
-.main input[type="checkbox"]:checked ~ .main-side-bar-hamburger span:nth-last-child(3) { transform: rotate(45deg) translate(0, -1px); }
+.main-side-bar ul.open { position: absolute; width: 250px; margin: -100px 0 0 -50px; padding-top: 125px; list-style-type: none; transform: none; }
 
-.main-side-bar { background-color: #191919; width: 0; position: relative; }
+.main-side-bar ul.open li { display: inline-block; padding: 5px; margin: 0 10px; }
 
-.main ul { position: absolute; width: 250px; margin: -100px 0 0 -50px; padding-top: 125px; list-style-type: none; transform-origin: 0% 0%; transform: translate(-100%, 0); transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); z-index: 0; }
+.main-side-bar ul.open svg { display: inline-block; width: 15px; height: 15px; fill: #a6a6a6; }
 
-.main ul a { display: inline-block; color: #818181; padding: 10px 10px; margin: 0 15px; font-size: 14px; line-height: 20px; font-family: "Roboto", sans-serif; font-weight: 300; }
+.main-side-bar ul a { display: inline-block; color: #818181; padding: 10px 10px; margin: 0 15px; font-size: 14px; line-height: 20px; font-family: "Roboto", sans-serif; font-weight: 300; }
 
-.main ul a:hover { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 100%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; }
+.main-side-bar ul a:hover { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 90%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; }
 
-.main ul a:hover svg { fill: #FFFFFF; }
+.main-side-bar ul a:hover svg { fill: #FFFFFF; }
 
-.main ul a:active { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 100%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; border-left: 4px solid #F58220; }
+.main-side-bar ul a:active { background-color: #282828; color: #FFFFFF; cursor: pointer; width: 95%; border-top: 1px solid #a6a6a6; border-bottom: 1px solid #a6a6a6; border-left: 4px solid #F58220; }
 
-.main ul a:active svg { fill: #FFFFFF; }
+.main-side-bar ul a:active svg { fill: #FFFFFF; }
 
-.main ul li { display: inline-block; padding: 5px; margin: 0 10px; }
+.main-side-bar ul svg { display: inline-block; width: 15px; height: 15px; fill: #a6a6a6; margin: 0; padding: 0; }
 
-.main ul svg { display: inline-block; width: 15px; height: 15px; fill: #a6a6a6; }
+.main-side-bar ul .side-bar-line { border-top: 2px solid #333333; margin-top: 10px; padding-top: 10px; width: auto; }
 
-.main-side-bar-hamburger { display: inline-block; position: absolute; top: 15px; left: 173px; z-index: 1; }
+.main-side-bar-hamburger { display: inline-block; position: absolute; top: 0; left: 0; z-index: 2; padding: 14px 10px; background-color: #191919; }
 
 .main-side-bar-hamburger span { display: block; width: 33px; height: 4px; margin-bottom: 5px; position: relative; background: #bcbcbc; border-radius: 3px; z-index: 1; transform-origin: 4px 0px; transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
 
@@ -408,8 +408,32 @@ a:hover { color: tomato; }
 
 .main-side-bar-hamburger span:nth-last-child(2) { transform-origin: 0% 100%; }
 
+.main-side-bar-hamburger.open { display: inline-block; position: absolute; top: 15px; left: 173px; padding: 0; z-index: 2; background-color: #191919; }
+
+.main-side-bar-hamburger.open span { opacity: 1; transform: rotate(-45deg) translate(-2px, -1px); background: #bcbcbc; }
+
+.main-side-bar-hamburger.open span:nth-last-child(2) { opacity: 0; transform: rotate(0deg) scale(0.2, 0.2); }
+
+.main-side-bar-hamburger.open span:nth-last-child(3) { transform: rotate(45deg) translate(0, -1px); }
+
 .main-content { width: 100%; background-color: #E3E3E3; }
 
-.main-content-generalstat { margin: 15px; height: 798px; width: 100%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #ffffff; }
+.main-content-generalstat { margin: 15px; height: 798px; width: calc(100% - 30px); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); background-color: #ffffff; }
+
+.main-content-generalstat .generalstat-title { display: block; font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto"; font-weight: 500; padding: 15px; border-bottom: 1px solid #a6a6a6; }
+
+.main-content-generalstat .generalstat-dateperiod { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; padding: 15px; border-bottom: 1px solid #a6a6a6; }
+
+.main-content-generalstat .generalstat-dateperiod .btn-prim { margin: 20px; padding: 5px; border-radius: 5px; border: 1px solid #F58220; }
+
+.main-content-generalstat .generalstat-dateperiod .btn-prim .ico-refresh { display: inline-block; width: 20px; height: 20px; fill: #FFFFFF; margin: 5px; }
+
+.main-content-generalstat .generalstat-table { margin: 30px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
+
+.main-content-generalstat .generalstat-chart-text { font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; margin: 30px; padding-left: 22%; }
+
+.main-content-generalstat .generalstat-chart { margin: 30px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
+
+.main-content-generalstat .generalstat-chart .corortab { margin: 0; padding: 0 2em; }
 
 /* Pages / Views */

@@ -64,9 +64,9 @@
 	@include size(14px, 14px);
 	fill: $bttn-disabled;
 	display: inline-block;
-	z-index: -1;
+	z-index: 1;
 	top: 15px;
-	right: 2px;
+	right: 5px;
 }
 
 .date-period:hover .date-end input[type="date"] ~ .ico-calendar {

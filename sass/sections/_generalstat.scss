@@ -1,7 +1,68 @@
 .main-content-generalstat {
 	margin: 15px;
 	height: 798px;
-	width: 100%;
+	width: calc(100% - 30px);
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	background-color: #ffffff;
+	.generalstat-title {
+		display: block;
+		font-size: 16px;
+		line-height: 42px;
+		color: #a6a6a6;
+		font-family: "Roboto";
+		font-weight: 500;
+		padding: 15px;
+		border-bottom: 1px solid #a6a6a6;
+	}
+	.generalstat-dateperiod {
+		display: flex;
+		justify-content: center;
+		padding: 15px;
+		border-bottom: 1px solid #a6a6a6;
+		.btn-prim {
+			margin: 20px;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid $bttn-primary;
+			.ico-refresh {
+				display: inline-block;
+				@include size(20px, 20px);
+				fill: $bttn-color;
+				margin: 5px;
+			}
+		}
+	}
+	.generalstat-table {
+		margin: 30px;
+		padding: 10px 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	.generalstat-chart-text {
+		font-size: $section-header-fsize;
+		line-height: 42px;
+		color: $bttn-secondary;
+		font-family: $font-roboto;
+		font-weight: $heavy-font;
+		margin: 30px;
+		padding-left: 22%;
+	}
+	.generalstat-chart {
+		margin: 30px;
+		padding: 10px 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		.corortab {
+			margin: 0;
+			padding: 0 2em;
+
+		}
+	}
 }
+
+
+
