@@ -59,8 +59,19 @@
 		.corortab {
 			margin: 0;
 			padding: 0 2em;
-
+			#two ~ label:before {
+				border-color: $bttn-primary;
+			    background-color: $bttn-primary;
+			}
+			#three ~ label:before {
+				border-color: $cort-bar-color;
+			    background-color: $cort-bar-color;
+			}
 		}
+	}
+	#myChart {
+		width: 1000px;
+		height: 250px;
 	}
 }
 

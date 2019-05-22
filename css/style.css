@@ -229,7 +229,7 @@ a:hover { color: #FFA200; }
 
 .corortab { display: inline-block; margin: 10px; }
 
-.corortab input[type="checkbox"] ~ label { display: inline-block; margin: .2em; cursor: pointer; padding: 0 1em; transition: .3s; }
+.corortab input[type="checkbox"] ~ label { display: inline-block; margin: .2em; cursor: pointer; padding: 0 2em; transition: .3s; }
 
 .corortab input[type="checkbox"] ~ label:hover { display: inline-block; background-color: #F5F5F2; padding: 0 2em; border-radius: 3px; visibility: visible; }
 
@@ -435,5 +435,11 @@ a:hover { color: tomato; }
 .main-content-generalstat .generalstat-chart { margin: 30px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
 
 .main-content-generalstat .generalstat-chart .corortab { margin: 0; padding: 0 2em; }
+
+.main-content-generalstat .generalstat-chart .corortab #two ~ label:before { border-color: #F58220; background-color: #F58220; }
+
+.main-content-generalstat .generalstat-chart .corortab #three ~ label:before { border-color: #04AE00; background-color: #04AE00; }
+
+.main-content-generalstat #myChart { width: 1000px; height: 250px; }
 
 /* Pages / Views */
