@@ -428,11 +428,11 @@ a:hover { color: tomato; }
 
 .main-content-generalstat .generalstat-dateperiod .btn-prim .ico-refresh { display: inline-block; width: 20px; height: 20px; fill: #FFFFFF; margin: 5px; }
 
-.main-content-generalstat .generalstat-table { margin: 30px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
+.main-content-generalstat .generalstat-table { margin: 15px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
 
-.main-content-generalstat .generalstat-chart-text { font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; margin: 30px; padding-left: 22%; }
+.main-content-generalstat .generalstat-chart-text { font-size: 16px; line-height: 42px; color: #a6a6a6; font-family: "Roboto", sans-serif; font-weight: 700; margin: 15px; padding-left: 22%; }
 
-.main-content-generalstat .generalstat-chart { margin: 30px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
+.main-content-generalstat .generalstat-chart { margin: 5px; padding: 10px 10px; display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: center; justify-content: center; -ms-flex-line-pack: center; align-content: center; }
 
 .main-content-generalstat .generalstat-chart .corortab { margin: 0; padding: 0 2em; }
 
@@ -440,6 +440,8 @@ a:hover { color: tomato; }
 
 .main-content-generalstat .generalstat-chart .corortab #three ~ label:before { border-color: #04AE00; background-color: #04AE00; }
 
-.main-content-generalstat #myChart { width: 1000px; height: 250px; }
+.main-content-generalstat .generalstat-container { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; }
+
+.main-content-generalstat .generalstat-container .generalstat-canvas { margin: 10px; padding: 10px; width: 45%; }
 
 /* Pages / Views */
