@@ -3,22 +3,22 @@
 	height: 798px;
 	width: calc(100% - 30px);
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	background-color: #ffffff;
+	background-color: $basic-white;
 	.generalstat-title {
 		display: block;
-		font-size: 16px;
+		font-size: $lg-link-fsize;
 		line-height: 42px;
-		color: #a6a6a6;
+		color: $basic-gray;
 		font-family: "Roboto";
-		font-weight: 500;
+		font-weight: $average-font;
 		padding: 15px;
-		border-bottom: 1px solid #a6a6a6;
+		border-bottom: 1px solid $basic-gray;
 	}
 	.generalstat-dateperiod {
 		display: flex;
 		justify-content: center;
 		padding: 15px;
-		border-bottom: 1px solid #a6a6a6;
+		border-bottom: 1px solid $basic-gray;
 		.btn-prim {
 			margin: 20px;
 			padding: 5px;
