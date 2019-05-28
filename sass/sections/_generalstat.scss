@@ -1,6 +1,7 @@
 .main-content-generalstat {
 	margin: 15px;
-	height: 798px;
+	// height: 798px;
+	height: auto;
 	width: calc(100% - 30px);
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	background-color: $basic-white;
@@ -15,30 +16,64 @@
 		border-bottom: 1px solid $basic-gray;
 	}
 	.generalstat-dateperiod {
-		display: flex;
-		justify-content: center;
-		padding: 15px;
 		border-bottom: 1px solid $basic-gray;
-		.btn-prim {
-			margin: 20px;
-			padding: 5px;
-			border-radius: 5px;
-			border: 1px solid $bttn-primary;
-			.ico-refresh {
-				display: inline-block;
-				@include size(20px, 20px);
-				fill: $bttn-color;
-				margin: 5px;
+		.date-period-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+			.date-period {
+				margin: 20px;
+				padding: 5px;
+			}
+		}
+		.btn-container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+			.btn-prim {
+				margin: 20px;
+				padding: 5px;
+				border-radius: 5px;
+				border: 1px solid $bttn-primary;
+				.ico-refresh {
+					display: inline-block;
+					@include size(20px, 20px);
+					fill: $bttn-color;
+					margin: 5px;
+				}
 			}
 		}
 	}
 	.generalstat-table {
 		margin: 15px;
 		padding: 10px 10px;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-content: center;
+		.oneDigList {
+			display: flex;
+			@media (max-width: 767px){
+				justify-content: center;
+				margin: 15px;
+			}
+		}
+		.col-one {
+			justify-content: flex-end;
+			margin-left: 300px;
+			@media (max-width: 767px){
+				margin: 15px 50px;
+			}
+		}
+		.col-two {
+			justify-content: flex-start;
+			margin-right: 300px;
+			@media (max-width: 767px){
+				margin: 15px 50px;
+			}
+		}
 	}
 	.generalstat-chart-text {
 		font-size: $section-header-fsize;
@@ -59,6 +94,9 @@
 		.corortab {
 			margin: 0;
 			padding: 0 2em;
+			@media (max-width: 767px) {
+				padding: 0;
+			}
 			#two ~ label:before {
 				border-color: $bttn-primary;
 			    background-color: $bttn-primary;
@@ -73,14 +111,15 @@
 		display: flex;
 		justify-content: center;
 		.generalstat-canvas {
-			// display: inline-block;
 			margin: 10px;
 			padding: 10px;
-			// position: relative;
 			width: 45%;
+			@media (max-width: 767px) {
+				width: auto;
+			}
+
 		}
 	}
 }
-
 
 
