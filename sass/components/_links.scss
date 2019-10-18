@@ -1,0 +1,23 @@
+
+a {
+	text-decoration: none;
+	color: $color-tab;
+	&:hover {
+		color: $basic-orange-hvr;
+	}
+}
+
+.link-large {
+	font-size: $lg-link-fsize;
+}
+
+.link-small {
+	font-size: $sm-link-fsize;
+}
+
+.show {
+	@include size(13px, 13px);
+	&:hover {
+		cursor: pointer;
+	}
+}

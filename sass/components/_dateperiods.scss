@@ -1,0 +1,87 @@
+* {
+	box-sizing: border-box;
+}
+
+.date-period {
+	margin: 20px;
+	padding: 0px;
+	border: 1px solid $bttn-disabled;
+	border-radius: 3px;
+	display: inline-block;
+	&:hover {
+		border-color: $checked-digital;
+		cursor: pointer;
+		.date-start {
+			border-color: $checked-digital;
+		}
+	}
+}
+
+.date-period div {
+	display: inline-block;
+	// margin: 5px 5px;
+	font-size: $text-fsize;
+	// line-height: 42px;
+	color: $checked-digital;
+	font-family: $font-roboto;
+	font-weight: $light-font;
+}
+
+.date-period .date-start {
+	// padding: 5px 50px 5px 5px;
+	position: relative;
+	border-right: 1px solid $bttn-disabled;
+}
+
+.date-period .date-end {
+	position: relative;
+}
+.date-period input {
+	background:rgba(0,0,0,0);
+	border: none;
+	line-height: 42px;
+	display: block;
+	&:focus {
+		outline: none;
+	}
+}
+
+.date-period input[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0
+}
+
+.date-period input[type="date"]::-webkit-inner-spin-button {
+    opacity: 0
+}
+
+.date-period input[type="date"]::-webkit-search-cancel-button {
+    -webkit-appearance: none
+    // opacity: 0
+}
+
+.date-period .date-end input[type="date"] ~ .ico-calendar {
+	position: absolute;
+	@include size(14px, 14px);
+	fill: $bttn-disabled;
+	display: inline-block;
+	z-index: 1;
+	top: 15px;
+	right: 5px;
+}
+
+.date-period:hover .date-end input[type="date"] ~ .ico-calendar {
+	fill: $checked-digital;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}

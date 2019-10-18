@@ -1,0 +1,17 @@
+/* Typography */
+
+h1 {
+	font-size: $page-header-fsize;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: $section-header-fsize;
+	font-weight: bold;
+}
+
+p {
+	font-size: $text-fsize;
+}
+
+

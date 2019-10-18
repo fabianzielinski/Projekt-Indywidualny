@@ -1,0 +1,58 @@
+
+/* Colors */
+
+$bg-black: #191919;
+$basic-black: #333333;
+$basic-white: #FFFFFF;
+$basic-gray: #a6a6a6;
+$basic-gray-hvr: #bcbcbc;
+$basic-disabled: #E3E3E3;
+$hover-gray: #F5F5F2;
+$basic-orange: #F58220;
+$basic-orange-hvr: #FFA200;
+$positive-color: #04AE00;
+$positive-notifi: #74B67A;
+$positive-notifi-hvr: #96CC9B;
+$negative-notifi: #DE5252;
+$negative-notifi-hvr: #EC7171;
+$color-tab: #56819F;
+$negative-color: #FF0000;
+
+/*Components colors*/
+$bttn-color: $basic-white;
+$bttn-primary: $basic-orange;
+$bttn-primary-hvr: $basic-orange-hvr;
+$bttn-secondary: $basic-gray;
+$bttn-secondary-hvr: $basic-gray-hvr;
+$bttn-disabled: $basic-disabled;
+$link-hover: $hover-gray;
+$link-color: $color-tab;
+$checked-digital: $basic-black;
+$sidebar-bg-color: $bg-black;
+$cort-bar-color: $positive-color;
+
+/* Fonts Size */
+
+$text-fsize: 14px;
+$page-header-fsize: 16px;
+$section-header-fsize: 16px;
+$lg-link-fsize: 16px;
+$sm-link-fsize: 13px;
+$btn-fsize: 18px;
+$logo-fsize: 36px;
+
+/* Fonts */
+
+$font-roboto: 'Roboto', sans-serif;
+// <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+$font-caveat: 'Caveat', cursive;
+// @import url('https://fonts.googleapis.com/css?family=Caveat');
+
+/* Font Weight */
+
+$light-font: 300;
+$normal-font: 400;
+$average-font: 500;
+$heavy-font: 700;
+
+

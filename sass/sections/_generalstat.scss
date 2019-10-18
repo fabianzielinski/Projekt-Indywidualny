@@ -1,0 +1,125 @@
+.main-content-generalstat {
+	margin: 15px;
+	// height: 798px;
+	height: auto;
+	width: calc(100% - 30px);
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	background-color: $basic-white;
+	.generalstat-title {
+		display: block;
+		font-size: $lg-link-fsize;
+		line-height: 42px;
+		color: $basic-gray;
+		font-family: "Roboto";
+		font-weight: $average-font;
+		padding: 15px;
+		border-bottom: 1px solid $basic-gray;
+	}
+	.generalstat-dateperiod {
+		border-bottom: 1px solid $basic-gray;
+		.date-period-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+			.date-period {
+				margin: 20px;
+				padding: 5px;
+			}
+		}
+		.btn-container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			@media (max-width: 767px) {
+				justify-content: center;
+			}
+			.btn-prim {
+				margin: 20px;
+				padding: 5px;
+				border-radius: 5px;
+				border: 1px solid $bttn-primary;
+				.ico-refresh {
+					display: inline-block;
+					@include size(20px, 20px);
+					fill: $bttn-color;
+					margin: 5px;
+				}
+			}
+		}
+	}
+	.generalstat-table {
+		margin: 15px;
+		padding: 10px 10px;
+		.oneDigList {
+			display: flex;
+			@media (max-width: 767px){
+				justify-content: center;
+				margin: 15px;
+			}
+		}
+		.col-one {
+			justify-content: flex-end;
+			margin-left: 300px;
+			@media (max-width: 767px){
+				margin: 15px 50px;
+			}
+		}
+		.col-two {
+			justify-content: flex-start;
+			margin-right: 300px;
+			@media (max-width: 767px){
+				margin: 15px 50px;
+			}
+		}
+	}
+	.generalstat-chart-text {
+		font-size: $section-header-fsize;
+		line-height: 42px;
+		color: $bttn-secondary;
+		font-family: $font-roboto;
+		font-weight: $heavy-font;
+		margin: 15px;
+		padding-left: 22%;
+	}
+	.generalstat-chart {
+		margin: 5px;
+		padding: 10px 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		.corortab {
+			margin: 0;
+			padding: 0 2em;
+			@media (max-width: 767px) {
+				padding: 0;
+			}
+			#two ~ label:before {
+				border-color: $bttn-primary;
+			    background-color: $bttn-primary;
+			}
+			#three ~ label:before {
+				border-color: $cort-bar-color;
+			    background-color: $cort-bar-color;
+			}
+		}
+	}
+	.generalstat-container {
+		display: flex;
+		justify-content: center;
+		.generalstat-canvas {
+			margin: 10px;
+			padding: 10px;
+			width: 45%;
+			@media (max-width: 767px) {
+				width: auto;
+			}
+
+		}
+	}
+}
+
+
