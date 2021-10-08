@@ -47,6 +47,6 @@
   "nu-html-checker": "^0.1.0",
   "onchange": "^5.2.0",
   "superagent": "^5.0.4",
-  "tar": "^4.4.8"
+  "tar": "^4.4.18"
  }
 }
